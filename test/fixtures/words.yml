@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: Str 1
+  locase_value: str 1
+
+two:
+  value: Str 2
+  locase_value: str 2
