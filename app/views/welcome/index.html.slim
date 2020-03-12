@@ -2,11 +2,10 @@
   .col-2
   .col-8
     h2.hello Hello, Collab!
+
+    =render 'welcome/form'
+    =render 'welcome/list'
+
+
   .col-2
 
-.row
-  form
-    .form-group
-      label for="word_input" World search
-      input type="text" class="word_search form-control" id="word_input"
-      small id="word_input_help" class="form-text text-muted" Input first symbols here.
