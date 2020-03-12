@@ -27,8 +27,10 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'slim'
+gem 'slim-rails'
 
-gem 'bulk_insert'
+gem 'bulk_insert' # Words mass-uploading
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
