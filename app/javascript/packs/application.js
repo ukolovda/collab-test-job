@@ -23,3 +23,7 @@ import '../../assets/stylesheets/application.scss'
 import 'bootstrap'
 
 import './_autocomplete'
+
+// For visibility of jQuery at View level (used in JS)
+window.jQuery = $;
+window.$ = $;

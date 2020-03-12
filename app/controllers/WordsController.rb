@@ -6,7 +6,7 @@ class WordsController < ApplicationController
   end
 
   def create
-    word = params[:word]
-    append_to_user_dictionary word
+    @word = params[:word]
+    append_to_user_dictionary @word
   end
 end

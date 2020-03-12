@@ -1,6 +1,5 @@
 .row
   .col-12
     | Your words:
-    ul
-      - @dictionary.sort.each do |word|
-        li= word
+    ul.words_list
+      = render partial: 'list_item', collection: @dictionary.sort

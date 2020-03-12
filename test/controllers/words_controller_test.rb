@@ -12,8 +12,9 @@ class WordsControllerTest < ActionController::TestCase
   end
 
   test 'should post new word' do
-    post :create, params: {word: 'abc'}
+    post :create, xhr: true, params: {word: 'abc'}
     assert_equal ['abc'], session[:dictionary]
+    assert_response :success
   end
 
 end
