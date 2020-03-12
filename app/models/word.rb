@@ -9,6 +9,14 @@ class Word < ApplicationRecord
 
   SOURCE_URL = 'https://github.com/dwyl/english-words/blob/master/words.txt?raw=true'
 
+
+  # Case-insensitive search and sorting
+  # @param [String] template - first part of searching word
+  # @param [Integer] limit
+  def self.get_words(template, limit)
+    where('words.locase_value like ?', ["#{template}%"]).order(:locase_value).limit(limit).pluck(:value)
+  end
+  
   def self.upload
     upload_from_url SOURCE_URL
   end

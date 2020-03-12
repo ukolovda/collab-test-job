@@ -18,4 +18,9 @@ class WordTest < ActiveSupport::TestCase
     assert_not_nil r
     assert_equal 'aalto', r.locase_value
   end
+
+  test 'get words' do
+    values = Word.get_words('str', 10)
+    assert_equal ['str 1', 'Str 2'], values
+  end
 end

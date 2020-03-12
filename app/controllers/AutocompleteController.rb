@@ -1,5 +1,7 @@
 class AutocompleteController < ApplicationController
   include DictionaryHelper
+
+  WORDS_LIMIT = 20
   
   def words
     @dictionary = user_dictionary
@@ -10,7 +12,8 @@ class AutocompleteController < ApplicationController
   private
 
   def get_words(template)
-    ['aaa', 'bbb', 'Ccc']
+    Word.get_words(template, WORDS_LIMIT)
+    # ['aaa', 'bbb', 'Ccc']
   end
   
 end
