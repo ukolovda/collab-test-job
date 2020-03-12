@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  root to: 'words#index'
+  root to: redirect('/words')
 
+  resources :words, only: [:index, :create]
+  
   get '/autocomplete/words' => 'autocomplete#words'
 end

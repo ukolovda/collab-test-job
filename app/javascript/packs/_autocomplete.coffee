@@ -24,9 +24,12 @@ $(document).on 'turbolinks:load',  ->
       select: (event, ui)->
         $(this).val('')
         console.log ui.item.value
-#        $.ajax
-#          url: '/call/recall.js?project_contact_id='+ui.item.id
-#          dataType: 'script'
+        $.ajax
+          url: '/words'
+          method: 'post'
+          data:
+            word: ui.item.value
+          dataType: 'script'
         false
     .data( "ui-autocomplete" )._renderItem =  ( ul, item )->
       if item.value=='NO_DATA'

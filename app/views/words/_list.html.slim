@@ -2,4 +2,5 @@
   .col-12
     | Your words:
     ul
-      li Stub
+      - @dictionary.sort.each do |word|
+        li= word
